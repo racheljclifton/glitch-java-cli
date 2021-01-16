@@ -11,21 +11,13 @@ To run a Java command-line program as a project on [Glitch](https://glitch.com):
 <plugin>
   <groupId>org.springframework.boot</groupId>
   <artifactId>spring-boot-maven-plugin</artifactId>
+  <version>2.4.1</version>
   <configuration>
     <mainClass>
       com.example.main
     </mainClass>
   </configuration>
 </plugin>
-```
-* If that plugin isn't found, also add this section to your pom.xml:
-```
-<repositories>
-  <repository>
-      <id>spring-repo</id>
-      <url>https://repo.spring.io/release</url>
-    </repository>
-</repositories>
 ```
 * Build the jar by running `mvn clean package spring-boot:repackage`
 * Find the resulting jar in the target directory, rename it to `my_app.jar` and confirm it runs with `java -jar my_app.jar`
